@@ -43,6 +43,33 @@
             display: none;
             width: 35%;
         }
+        .slide img
+        {
+            width: 65%;
+        }
+        .wrapper {
+            width: 65%;
+            margin: auto;
+            background: #CCC
+        }
+        
+        .h_iframe {
+            position: relative;
+        }
+        
+        .h_iframe .ratio {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        
+        .h_iframe iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
     </style>
 
     <!--[if IE]>
@@ -66,21 +93,23 @@
                 , slidesNavigation: true
                 , anchors: ['firstPage', 'secondPage', '3rdPage']
                 , afterResponsive: function (isResponsive) {}
-                , menu: '#menu',
-            });
+                , menu: '#menu'
+            , });
 
             $("#logo").fadeIn("slow", function () {
 
             });
             setInterval(repeatCycle, randomNumber(3000, 5000))
-            function repeatCycle(){
+
+            function repeatCycle() {
                 $(".intro").effect("shake", {
-                    direction: "left",
-                    times: 4,
-                    distance: 5
+                    direction: "left"
+                    , times: 4
+                    , distance: 5
                 }, 30);
             }
-            function randomNumber(min, max){
+
+            function randomNumber(min, max) {
                 var number = min + Math.floor(Math.random() * max);
                 return number;
             }
@@ -91,11 +120,11 @@
 
 <body>
 
-<ul id="menu">
-    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
-    <li data-menuanchor="secondPage"><a href="#secondPage">Work</a></li>
-    <li data-menuanchor="3rdPage"><a href="#3rdPage">Contact</a></li>
-</ul>
+    <ul id="menu">
+        <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">Work</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">Contact</a></li>
+    </ul>
 
     <div id="fullpage">
 
@@ -117,17 +146,23 @@
             </div>
 
             <div class="slide" id="slide2" data-anchor="slide2">
-                <h1>Slide 2</h1>
+                <h1>Showreel</h1>
+                <div class="wrapper">
+                    <div class="h_iframe">
+                        <!-- a transparent image is preferable -->
+                        <img class="ratio" src="http://placehold.it/16x9" />
+                        <iframe src="https://www.youtube.com/embed/8HuCDtWJhjY" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
             </div>
 
             <div class="slide" id="slide3" data-anchor="slide3">
-                <h1>Slide 3</h1>
+                <h1>Blob</h1>
+                <img src="images/Blob.png">
             </div>
             <div class="slide" id="slide3" data-anchor="slide3">
-                <h1>Slide 4</h1>
-            </div>
-            <div class="slide" id="slide3" data-anchor="slide3">
-                <h1>Slide 5</h1>
+                <h1>Hairmonster</h1>
+                <img src="images/Hairmonster-jump.png">
             </div>
         </div>
         <div class="section" id="section2">
