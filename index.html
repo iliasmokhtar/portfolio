@@ -65,8 +65,8 @@
                 , responsiveHeight: 600
                 , slidesNavigation: true
                 , anchors: ['firstPage', 'secondPage', '3rdPage']
-                , menu: '#menu'
                 , afterResponsive: function (isResponsive) {}
+                , menu: '#menu',
             });
 
             $("#logo").fadeIn("slow", function () {
@@ -91,13 +91,7 @@
 
 <body>
 
-    <ul id="menu">
-        <li data-menuanchor="section0" class="active"><a href="#section0">Home</a></li>
-        <li data-menuanchor="section1"><a href="#section1">Work</a></li>
-        <li data-menuanchor="section2"><a href="#section2">Contact</a></li>
-    </ul>
-    
-    <ul id="menu">
+<ul id="menu">
     <li data-menuanchor="firstPage" class="active"><a href="#firstPage">Home</a></li>
     <li data-menuanchor="secondPage"><a href="#secondPage">Work</a></li>
     <li data-menuanchor="3rdPage"><a href="#3rdPage">Contact</a></li>
