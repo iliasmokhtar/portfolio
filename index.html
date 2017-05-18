@@ -3,74 +3,33 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Responsive Height - fullPage.js</title>
-    <meta name="author" content="Alvaro Trigo Lopez" />
-    <meta name="description" content="fullPage full-screen navigation and sections control menu." />
-    <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
+    <title>Ilias Mokhtar</title>
+    <meta name="author" content="Ilias Mokhtar" />
+    <meta name="description" content="Ilias Mokhtar's Portfolio" />
+    <meta name="keywords" content="fullpage,jquery,screen,fullscreen,navigation,control arrows, motion, capturing, design, portfolio" />
     <meta name="Resource-type" content="Document" />
 
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="stylesheets/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="stylesheets/examples.css" />
-    <style>
-        /* Style for our header texts
-	* --------------------------------------- */
-        
-        h1 {
-            font-size: 5em;
-            font-family: arial, helvetica;
-            color: #fff;
-            margin: 0;
-        }
-        
-        .intro p {
-            color: #fff;
-        }
-        /* Centered texts in each section
-	* --------------------------------------- */
-        
-        .section {
-            text-align: center;
-        }
-        /* Bottom menu
-	* --------------------------------------- */
-        
-        #infoMenu li a {
-            color: #fff;
-        }
-        
-        #logo {
-            display: none;
-            width: 35%;
-        }
-        .slide img
-        {
-            width: 65%;
-        }
-        .wrapper {
-            width: 65%;
-            margin: auto;
-            background: #CCC
-        }
-        
-        .h_iframe {
-            position: relative;
-        }
-        
-        .h_iframe .ratio {
-            display: block;
-            width: 100%;
-            height: auto;
-        }
-        
-        .h_iframe iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" />
 
     <!--[if IE]>
 		<script type="text/javascript">
@@ -81,41 +40,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
-    <script type="text/javascript" src="scripts/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="scripts/jquery.fullPage.min.js"></script>
+    <script type="text/javascript" src="scripts/typed.min.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            $('#fullpage').fullpage({
-                sectionsColor: ['#232323', '#232323', '#232323']
-                , responsiveHeight: 600
-                , slidesNavigation: true
-                , anchors: ['firstPage', 'secondPage', '3rdPage']
-                , afterResponsive: function (isResponsive) {}
-                , menu: '#menu'
-            , });
-
-            $("#logo").fadeIn("slow", function () {
-
-            });
-            setInterval(repeatCycle, randomNumber(3000, 5000))
-
-            function repeatCycle() {
-                $(".intro").effect("shake", {
-                    direction: "left"
-                    , times: 4
-                    , distance: 5
-                }, 30);
-            }
-
-            function randomNumber(min, max) {
-                var number = min + Math.floor(Math.random() * max);
-                return number;
-            }
-        });
-    </script>
-
+    <script type="text/javascript" src="scripts/script.js"></script>
 </head>
 
 <body>
@@ -132,54 +60,55 @@
             <div class="holder">
                 <div class="intro">
                     <img id="logo" src="images/Abstract_PNG.png" alt="1" />
+                    <div class="head-text">
+                        <h1 class="tagline">I'm <span id="typed"></span></h1>
+                        <h4 class="sub-tagline">portfolio website</h4>
+                    </div>
+
                 </div>
             </div>
         </div>
         <div class="section" id="section1">
             <div class="slide" id="slide1" data-anchor="slide1">
                 <div class="intro">
-                    <h1>Navigate through my work</h1>
-                    <p>
-                        You can even click on the navigation and jump directly to another section.
-                    </p>
-                </div>
-            </div>
-
-            <div class="slide" id="slide2" data-anchor="slide2">
-                <h1>Showreel</h1>
-                <div class="wrapper">
-                    <div class="h_iframe">
-                        <!-- a transparent image is preferable -->
-                        <img class="ratio" src="http://placehold.it/16x9" />
-                        <iframe src="https://www.youtube.com/embed/8HuCDtWJhjY" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-            <div class="slide" id="slide2" data-anchor="slide2">
-                <h1>Showreel</h1>
-                <div class="wrapper">
-                    <div class="h_iframe">
-                        <!-- a transparent image is preferable -->
-                        <img class="ratio" src="http://placehold.it/16x9" />
-                       <iframe src="https://giphy.com/embed/xUA7biDoq2Gq2CeOVW" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/xUA7biDoq2Gq2CeOVW">via GIPHY</a></p>
+                    <h1>Showreel</h1>
+                    <div class="wrapper">
+                        <div class="h_iframe">
+                            <!-- a transparent image is preferable -->
+                            <img class="ratio" src="http://placehold.it/16x9" />
+                            <iframe src="https://www.youtube.com/embed/8HuCDtWJhjY" frameborder="0" allowfullscreen></iframe>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="slide" id="slide3" data-anchor="slide3">
+            <div class="slide" id="slide2" data-anchor="slide2">
+                <div class="wrapper">
+                    <div class="h_iframe">
+                        <!-- a transparent image is preferable -->
+                        <img class="ratio" src="http://placehold.it/16x9" />
+                        <iframe src="https://giphy.com/embed/xUA7biDoq2Gq2CeOVW" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+                        <p><a href="https://giphy.com/gifs/xUA7biDoq2Gq2CeOVW">via GIPHY</a></p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="slide" id="slide2" data-anchor="slide2">
                 <h1>Blob</h1>
                 <img src="images/Blob.png">
             </div>
+
             <div class="slide" id="slide3" data-anchor="slide3">
                 <h1>Hairmonster</h1>
                 <img src="images/Hairmonster-jump.png">
+
             </div>
         </div>
         <div class="section" id="section2">
             <div class="intro">
-                <h1>Please feel free to contact me if interested!</h1>
-                <p>ilias.mokhtar@hotmail.com</p>
+                <h1 class="tagline">Contact me, <span id="typed2"></span></h1>
             </div>
+            <p>ilias.mokhtar@hotmail.com</p>
         </div>
     </div>
 
