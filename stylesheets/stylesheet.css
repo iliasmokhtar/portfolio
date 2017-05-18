@@ -118,6 +118,8 @@ h1 {
 
 p {
     font-size: 2em;
+    color: white;
+    text-shadow: 0px 2px 4px #000;
 }
 
 .intro p {
@@ -327,12 +329,12 @@ h1 {
     text-shadow: 0px 2px 4px #000;
     margin: 0;
 }
-#typed
-{
+
+#typed {
     color: #4CFF8B;
-    
 }
-#typed2{
+
+#typed2 {
     color: #6B47BD;
 }
 
@@ -467,3 +469,42 @@ h1 {
     animation: 0;
     transition: opacity .25s;
 }
+
+
+/* ----------- iPhone 4 and 4S ----------- */
+
+
+/* Portrait and Landscape */
+
+@media only screen and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    #menu {
+        text-align: center;
+        font-size: 30pt;
+    }
+    #logo {
+        width: 75%;
+        padding-bottom: 15%;
+        
+    }
+    .fp-controlArrow {
+    }
+}
+/* ----------- iPad mini ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+       #menu {
+        text-align: center;
+        font-size: 30pt;
+    }
+    #logo {
+        width: 75%;
+        padding-bottom: 15%;
+        
+    }
+
+}
+

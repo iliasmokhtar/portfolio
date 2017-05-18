@@ -12,10 +12,10 @@
      $("#logo").fadeIn("slow", function () {
 
      });
-     setInterval(repeatCycle, randomNumber(3000, 5000))
+     setInterval(repeatCycle, randomNumber(3000, 5000));
 
      function repeatCycle() {
-         $(".intro").effect("shake", {
+         $(".logocontainer").effect("shake", {
              direction: "left"
              , times: 4
              , distance: 5
