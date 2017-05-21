@@ -13,7 +13,7 @@
 
      });
      setInterval(repeatCycle, randomNumber(3000, 5000));
-
+     setInterval(testIfOnScreen, 1000);
      function repeatCycle() {
          $(".logocontainer").effect("shake", {
              direction: "left"
@@ -64,9 +64,45 @@
              lift();
          }
      });
+     var execOnce = false;
+     function testIfOnScreen() {
+         if ($("#slide4").isOnScreen() && execOnce == false) {
+             execOnce = true;
+             console.log("on screen");
+             $("#typed3").typed({
+                 strings: ["More work is currently being made!", "...", "...", "...", "...", "Still here?", "Why?", "There's nothing to see here!", "Trust me :)", "More content is on it's way!", "Interested? :D", "Don't hesitate to contact me!"]
+                 , typeSpeed: 30
+                 , backDelay: 2000
+                 , loop: true
+                 , contentType: 'html', // or text
+                 // defaults to null for infinite loop
+                 loopCount: null
+                 , callback: function () {
+                     lift();
+                 }
+             });
+         }
+     }
 
      function lift() {
          $(".head-text").addClass("lift-text");
      }
+     $.fn.isOnScreen = function () {
 
+         var win = $(window);
+
+         var viewport = {
+             top: win.scrollTop()
+             , left: win.scrollLeft()
+         };
+         viewport.right = viewport.left + win.width();
+         viewport.bottom = viewport.top + win.height();
+
+         var bounds = this.offset();
+         bounds.right = bounds.left + this.outerWidth();
+         bounds.bottom = bounds.top + this.outerHeight();
+
+         return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+
+     };
  });
