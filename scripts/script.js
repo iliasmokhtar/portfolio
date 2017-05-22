@@ -66,7 +66,7 @@
      });
      var execOnce = false;
      function testIfOnScreen() {
-         if ($("#slide4").isOnScreen() && execOnce == false) {
+         if ($("#slide5").isOnScreen() && execOnce == false) {
              execOnce = true;
              console.log("on screen");
              $("#typed3").typed({
